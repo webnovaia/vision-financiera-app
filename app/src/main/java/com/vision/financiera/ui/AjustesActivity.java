@@ -1,0 +1,1 @@
+// Preferencias de la app

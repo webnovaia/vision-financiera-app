@@ -1,0 +1,1 @@
+// Resumen de ingresos/gastos con gráficos

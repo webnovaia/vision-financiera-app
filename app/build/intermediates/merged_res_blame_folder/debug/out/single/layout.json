@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "com.vision.financiera.app-mergeDebugResources-42:/layout/activity_resumen.xml",
+        "source": "com.vision.financiera.app-main-45:/layout/activity_resumen.xml"
+    },
+    {
+        "merged": "com.vision.financiera.app-mergeDebugResources-42:/layout/activity_ajustes.xml",
+        "source": "com.vision.financiera.app-main-45:/layout/activity_ajustes.xml"
+    },
+    {
+        "merged": "com.vision.financiera.app-mergeDebugResources-42:/layout/activity_filtro_fecha.xml",
+        "source": "com.vision.financiera.app-main-45:/layout/activity_filtro_fecha.xml"
+    },
+    {
+        "merged": "com.vision.financiera.app-mergeDebugResources-42:/layout/activity_splash.xml",
+        "source": "com.vision.financiera.app-main-45:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.vision.financiera.app-mergeDebugResources-42:/layout/activity_grafico_resumen.xml",
+        "source": "com.vision.financiera.app-main-45:/layout/activity_grafico_resumen.xml"
+    },
+    {
+        "merged": "com.vision.financiera.app-mergeDebugResources-42:/layout/activity_main.xml",
+        "source": "com.vision.financiera.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.vision.financiera.app-mergeDebugResources-42:/layout/activity_transacciones_categoria.xml",
+        "source": "com.vision.financiera.app-main-45:/layout/activity_transacciones_categoria.xml"
+    },
+    {
+        "merged": "com.vision.financiera.app-mergeDebugResources-42:/layout/activity_transacciones_fecha.xml",
+        "source": "com.vision.financiera.app-main-45:/layout/activity_transacciones_fecha.xml"
+    }
+]

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Visión Financiera</string>
+    <string name="filtrar_fecha">Filtrar por fecha</string>
+    <string name="filtrar_categoria">Filtrar por categoría</string>
+    <string name="titulo_resumen">Resumen de Transacciones</string>
+
+</resources>
