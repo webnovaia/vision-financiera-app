@@ -30,6 +30,8 @@
         <activity android:name=".ui.TransaccionesPorCategoriaActivity" />
         <activity android:name=".ui.TransaccionesPorFechaActivity" />
         <activity android:name=".ui.filtros.FiltroFechaActivity" />
+        <activity android:name=".ui.SeleccionCategoriaActivity" />
+        <activity android:name=".ui.InputGastoActivity" />
 
     </application>
 
