@@ -1,5 +1,6 @@
 package com.vision.financiera;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText etDescripcion, etMonto;
     Spinner spCategoria, spTipo;
-    Button btnGuardar;
+    Button btnGuardar, btnNuevoGasto;
     TextView tvResumen;
     ListView listaTransacciones;
     PieChart pieChart;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         spCategoria = findViewById(R.id.spCategoria);
         spTipo = findViewById(R.id.spTipo);
         btnGuardar = findViewById(R.id.btnGuardar);
+        btnNuevoGasto = findViewById(R.id.btnNuevoGasto);
         tvResumen = findViewById(R.id.tvResumen);
         listaTransacciones = findViewById(R.id.listaTransacciones);
         pieChart = findViewById(R.id.pieChart);
@@ -42,11 +44,17 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, datosLista);
         listaTransacciones.setAdapter(adapter);
+        cargarLista();
 
         MobileAds.initialize(this, initializationStatus -> {});
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
         adView.setVisibility(esPremium ? View.GONE : View.VISIBLE);
+
+        btnNuevoGasto.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, com.vision.financiera.ui.SeleccionCategoriaActivity.class);
+            startActivity(intent);
+        });
 
         btnGuardar.setOnClickListener(v -> {
             Transaccion t = new Transaccion();
@@ -66,6 +74,23 @@ public class MainActivity extends AppCompatActivity {
 
         cargarResumen();
         cargarGrafico();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cargarLista();
+        cargarResumen();
+        cargarGrafico();
+    }
+
+    private void cargarLista() {
+        datosLista.clear();
+        List<Transaccion> lista = AppDatabase.getInstance(this).transaccionDao().obtenerTodas();
+        for (Transaccion t : lista) {
+            datosLista.add(t.tipo + ": " + t.categoria + " - €" + t.monto);
+        }
+        adapter.notifyDataSetChanged();
     }
 
     private void cargarResumen() {
