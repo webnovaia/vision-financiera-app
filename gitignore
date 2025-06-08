@@ -1,0 +1,44 @@
+# ========== ANDROID STUDIO ==========
+
+# IDE
+.idea/
+*.iml
+
+# Gradle
+.gradle/
+build/
+out/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Local SDK/NDK configuration
+local.properties
+
+# Logs
+*.log
+
+# OS-generated
+.DS_Store
+Thumbs.db
+
+# Keystore (NO subir claves de firma)
+*.jks
+*.keystore
+
+# APKs
+*.apk
+*.ap_
+
+# Crashlytics/Firebase
+fabric.properties
+crashlytics-build.properties
+google-services.json
+
+# Misc
+*.class
+*.jar
+*.war
+*.tmp
+*.bak
+*.swp
